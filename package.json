@@ -19,16 +19,16 @@
     "@angular/platform-browser": "14.2.0",
     "@angular/platform-browser-dynamic": "14.2.0",
     "@angular/router": "14.2.0",
+    "bootstrap-icons": "^1.10.2",
     "lodash-es": "^4.17.21",
-    "mc-server-status": "^2.0.2",
-    "primeng": "14.2.2",
     "primeflex": "3.2.1",
-    "rcon-client": "^4.2.3",
+    "primeicons": "5.0.0",
+    "primeng": "14.2.2",
     "rxjs": "~7.5.6",
     "tslib": "2.4.0",
     "utility-types": "^3.10.0",
-    "zone.js": "0.11.8",
-    "web-animations-js": "2.3.2"
+    "web-animations-js": "2.3.2",
+    "zone.js": "0.11.8"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "14.2.1",

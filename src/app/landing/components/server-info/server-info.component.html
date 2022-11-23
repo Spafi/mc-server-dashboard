@@ -1,0 +1,62 @@
+<p-card>
+    <!--        START CARD HEADER-->
+    <ng-template pTemplate="header">
+        <div class="flex px-3 flex-row align-items-center justify-content-between">
+            <div>
+                <p class=" font-bold text-xl">
+                    Panarițiu is
+                    <span class="inline-flex align-items-center">
+                            <ng-container
+                                    *ngIf="serverStatusInfo.isOnline; else offline">
+                                Alive <i
+                                    class="bi bi-play-fill text-green-600 ml-2 text-4xl"></i>
+                            </ng-container>
+                        </span>
+                </p>
+            </div>
+
+            <div *ngIf="serverStatusInfo.isOnline"
+                 class="min-w-max text-lg">
+                Ping: {{serverStatusInfo.ping}}
+            </div>
+        </div>
+    </ng-template>
+    <!--        END CARD HEADER-->
+
+    <!--        START CARD CONTENT-->
+    <div *ngIf="serverStatusInfo.isOnline" class="my-0">
+        <p class="text-xl">Online
+            Players {{serverStatusInfo.onlinePlayersCount}}</p>
+
+        <div *ngFor="let player of serverStatusInfo.onlinePlayers"
+             class="mb-2">
+            <p-avatar class="mr-1"
+                      label="{{player.charAt(0)}}" shape="circle"></p-avatar>
+            {{player}}
+        </div>
+    </div>
+    <!--        END CARD CONTENT-->
+
+    <!--        START CARD FOOTER-->
+    <ng-template pTemplate="footer">
+        <div class="flex flex-row gap-2">
+            <button class="p-button-outlined p-button-rounded p-button-icon-left text-green-600"
+                    icon="bi bi-play-fill text-green-600"
+                    label="Start"
+                    pButton
+                    type="button"></button>
+
+            <button class="p-button-outlined p-button-rounded p-button-icon-left text-red-600"
+                    icon="bi bi-stop-fill text-red-600"
+                    label="Stop"
+                    pButton
+                    type="button"></button>
+        </div>
+    </ng-template>
+    <!--        END CARD FOOTER-->
+
+</p-card>
+
+<ng-template #offline>
+    Dead <i class="bi bi-stop-fill text-red-600 ml-2 text-4xl"></i>
+</ng-template>

@@ -27,8 +27,17 @@
       "~app/*": [
         "app/*"
       ],
+      "~landing/*": [
+        "app/landing/*"
+      ],
+      "~mods/*": [
+        "app/mods/*"
+      ],
       "~services/*": [
         "app/services/*"
+      ],
+      "~shared/*": [
+        "app/shared/*"
       ]
     },
     "allowSyntheticDefaultImports": true

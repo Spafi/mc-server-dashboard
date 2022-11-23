@@ -1,5 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --selection-background-color: #c595d4;
+  --selection-text-color: #222529;
+  --scrollbar-width: 8px;
+  --scrollbar-color: #c595d4;
+  --text-color: #a5a5a5;
+  --secondary-color: #71cecb;
+}
+
+
+* {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+  color: var(--text-color);
+
+  /* Code for Firefox */
+  scrollbar-width: var(--scrollbar-width);
+  scrollbar-color: var(--scrollbar-color) transparent;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 8px;
+}
+
+/* Code for Firefox */
+::-moz-selection {
+  color: var(--selection-text-color);
+  background: var(--selection-background-color);
+}
+
+::selection {
+  color: var(--selection-text-color);
+  background: var(--selection-background-color);
+}
+
+body,
 html {
-  background-color: #1d1c1c;
+  background-color: #222529;
   height: 100%;
   width: 100%;
   margin: 0;

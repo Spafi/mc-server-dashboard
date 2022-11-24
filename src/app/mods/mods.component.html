@@ -1,1 +1,12 @@
-<p>mods works!</p>
+<div class="grid">
+    <div class="col-3 fixed h-full pb-8">
+        <app-mod-menu></app-mod-menu>
+    </div>
+
+    <div class="col-offset-3 col-9">
+        <app-mod *ngFor="let mod of mods"
+                 [mod]="mod">
+        </app-mod>
+    </div>
+</div>
+

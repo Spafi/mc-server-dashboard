@@ -5,28 +5,30 @@ import { AppR } from '~shared/config/constants/routes';
 @Component( {
                 selector: 'app-nav-bar',
                 template: `
-                    <p-menubar [model]="items" styleClass="m-2 h-4rem">
+                    <div class="h-5rem">
+                        <p-menubar [model]="items" styleClass="h-4rem fixed w-full z-5">
 
-                        <!--    LOGO & NAME-->
-                        <ng-template pTemplate="start">
+                            <!--    LOGO & NAME-->
+                            <ng-template pTemplate="start">
 
-                            <a
-                                class="flex-row flex align-items-center justify-content-between gap-2 mr-6 no-underline"
-                                routerLink="/"
-                            >
-                                <img
-                                    src="assets/icon.png"
-                                    alt="Logo"
-                                    height="30"
-                                    width="30"
+                                <a
+                                    class="flex-row flex align-items-center justify-content-between gap-2 mr-6 no-underline"
+                                    routerLink="/"
                                 >
+                                    <img
+                                        src="assets/icon.png"
+                                        alt="Logo"
+                                        height="30"
+                                        width="30"
+                                    >
 
-                                <h3 class="min-w-max">Panarițiu MC</h3>
+                                    <h3 class="min-w-max">Panarițiu MC</h3>
 
-                            </a>
-                        </ng-template>
-                        <!--    END LOGO & NAME-->
-                    </p-menubar>
+                                </a>
+                            </ng-template>
+                            <!--    END LOGO & NAME-->
+                        </p-menubar>
+                    </div>
                 `,
                 styles  : [
                     `

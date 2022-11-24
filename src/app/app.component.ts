@@ -12,7 +12,7 @@ import { Engine } from 'tsparticles-engine';
                         [particlesInit]="particlesInit"
                     >
                     </ng-particles>
-                    
+
                     <div class="flex h-full flex-column">
 
                         <header class="flex-initial">

@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AppR } from '~shared/config/constants/routes';
+
+const routerOptions: ExtraOptions = {
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling          : 'enabled',
+    scrollOffset             : [ 0, 64 ]
+};
 
 const routes: Routes = [
     {
@@ -20,9 +26,7 @@ const routes: Routes = [
 
 @NgModule( {
                imports: [
-                   RouterModule.forRoot( routes, {
-                       initialNavigation: 'enabledBlocking'
-                   } )
+                   RouterModule.forRoot( routes, routerOptions )
                ],
                exports: [ RouterModule ]
            } )

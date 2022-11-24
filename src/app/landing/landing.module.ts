@@ -7,6 +7,7 @@ import { DockModule } from 'primeng/dock';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { MenubarModule } from 'primeng/menubar';
 import { LandingComponent } from '~landing/landing.component';
+import { DiscordComponent } from './components/discord/discord.component';
 import { ServerInfoComponent } from './components/server-info/server-info.component';
 import { LandingRoutingModule } from './landing-routing.module';
 
@@ -14,7 +15,8 @@ import { LandingRoutingModule } from './landing-routing.module';
 @NgModule( {
                declarations: [
                    LandingComponent,
-                   ServerInfoComponent
+                   ServerInfoComponent,
+                   DiscordComponent
                ],
                imports     : [
                    LandingRoutingModule,

@@ -1,9 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { loadFull } from 'tsparticles';
+import { Engine } from 'tsparticles-engine';
 
 @Component( {
                 selector: 'app-root',
                 template: `
+                    <ng-particles
+                        id="particles"
+                        [url]="particlesUrl"
+                        [particlesInit]="particlesInit"
+                    >
+                    </ng-particles>
+                    
                     <div class="flex h-full flex-column">
 
                         <header class="flex-initial">
@@ -19,6 +28,8 @@ import { PrimeNGConfig } from 'primeng/api';
             } )
 export class AppComponent implements OnInit {
 
+    particlesUrl = 'assets/particles-config/particles.json';
+
     constructor(
         private primengConfig: PrimeNGConfig
     ) {
@@ -26,5 +37,9 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.primengConfig.ripple = true;
+    }
+
+    async particlesInit(engine: Engine): Promise<void> {
+        await loadFull( engine );
     }
 }

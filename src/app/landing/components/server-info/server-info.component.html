@@ -6,17 +6,15 @@
                 <p class=" font-bold text-xl">
                     Panarițiu is
                     <span class="inline-flex align-items-center">
-                            <ng-container
-                                    *ngIf="serverStatusInfo.isOnline; else offline">
-                                Alive <i
-                                    class="bi bi-play-fill text-green-600 ml-2 text-4xl"></i>
-                            </ng-container>
+                                {{serverStatusInfo.isOnline ? 'Alive' : 'Dead'}}
+                        <i [ngClass]="serverStatusInfo.isOnline ? 'bi-hand-thumbs-up-fill text-green-600' : 'bi-hand-thumbs-down-fill text-red-600'"
+                           class="bi ml-2 text-4xl"></i>
                         </span>
                 </p>
             </div>
 
             <div *ngIf="serverStatusInfo.isOnline"
-                 class="min-w-max text-lg">
+                 class="min-w-max">
                 Ping: {{serverStatusInfo.ping}}
             </div>
         </div>
@@ -29,9 +27,10 @@
             Players {{serverStatusInfo.onlinePlayersCount}}</p>
 
         <div *ngFor="let player of serverStatusInfo.onlinePlayers"
-             class="mb-2">
+             class="mb-2 flex align-items-center">
             <p-avatar class="mr-1"
-                      label="{{player.charAt(0)}}" shape="circle"></p-avatar>
+                      image="https://source.boringavatars.com/beam/120/{{player}}?colors=08E7FF,3931AE,9429B8,001C1C,32383B"
+                      shape="circle"></p-avatar>
             {{player}}
         </div>
     </div>
@@ -56,7 +55,3 @@
     <!--        END CARD FOOTER-->
 
 </p-card>
-
-<ng-template #offline>
-    Dead <i class="bi bi-stop-fill text-red-600 ml-2 text-4xl"></i>
-</ng-template>

@@ -1,16 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
+@font-face {
+  font-family: Minecraft;
+  src: url('~assets/fonts/MinecraftEvenings.ttf');
+}
 
 :root {
   --font-family: 'Montserrat', sans-serif;
-  --selection-background-color: #c595d4;
   --selection-text-color: #222529;
   --scrollbar-width: 8px;
-  --scrollbar-color: #c595d4;
   --text-color: #a5a5a5;
-  --secondary-color: #71cecb;
+  --blue: #71cecb;
+  --purple: #c595d4;
 }
 
+.minecraft-font {
+  font-family: Minecraft, cursive;
+}
+
+.stroke {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.gradient-text {
+  background: #71CECB;
+  background: -webkit-repeating-linear-gradient(to right, #71CECB 0%, #C595D4 100%);
+  background: -moz-repeating-linear-gradient(to right, #71CECB 0%, #C595D4 100%);
+  background: repeating-linear-gradient(to right, #71CECB 0%, #C595D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
 
 * {
   font-family: var(--font-family);
@@ -19,7 +39,7 @@
 
   /* Code for Firefox */
   scrollbar-width: var(--scrollbar-width);
-  scrollbar-color: var(--scrollbar-color) transparent;
+  scrollbar-color: var(--purple) transparent;
 }
 
 ::-webkit-scrollbar {
@@ -28,19 +48,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-color);
+  background: var(--purple);
   border-radius: 8px;
 }
 
 /* Code for Firefox */
 ::-moz-selection {
   color: var(--selection-text-color);
-  background: var(--selection-background-color);
+  background: var(--purple);
 }
 
 ::selection {
   color: var(--selection-text-color);
-  background: var(--selection-background-color);
+  background: var(--purple);
 }
 
 body,
@@ -48,4 +68,12 @@ html {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.bg-gray {
+  background: #1a191b;
+}
+
+.border-purple {
+  border-color: var(--purple);
 }

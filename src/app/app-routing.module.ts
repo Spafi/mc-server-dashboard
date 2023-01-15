@@ -19,8 +19,16 @@ const routes: Routes = [
         loadChildren: () => import('~landing/landing.module').then( m => m.LandingModule )
     },
     {
+        path        : AppR.mobs.simple,
+        loadChildren: () => import('~mobs/mobs.module').then( m => m.MobsModule )
+    },
+    {
         path        : AppR.mods.simple,
         loadChildren: () => import('~mods/mods.module').then( m => m.ModsModule )
+    },
+    {
+        path        : AppR.rcon.simple,
+        loadChildren: () => import('~rcon/rcon.module').then( m => m.RconModule )
     }
 ];
 

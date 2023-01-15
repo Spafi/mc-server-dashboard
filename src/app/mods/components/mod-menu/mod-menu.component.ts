@@ -10,7 +10,6 @@ import { AppR } from '~shared/config/constants/routes';
                 styleUrls  : [ './mod-menu.component.scss' ]
             } )
 export class ModMenuComponent implements OnInit {
-
     items!: MenuItem[];
 
     constructor(private readonly router: Router) {

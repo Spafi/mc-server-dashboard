@@ -4,10 +4,12 @@ import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DockModule } from 'primeng/dock';
+import { GalleriaModule } from 'primeng/galleria';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { MenubarModule } from 'primeng/menubar';
 import { LandingComponent } from '~landing/landing.component';
 import { DiscordComponent } from './components/discord/discord.component';
+import { GalleriaComponent } from './components/galleria/galleria.component';
 import { ServerInfoComponent } from './components/server-info/server-info.component';
 import { LandingRoutingModule } from './landing-routing.module';
 
@@ -16,7 +18,8 @@ import { LandingRoutingModule } from './landing-routing.module';
                declarations: [
                    LandingComponent,
                    ServerInfoComponent,
-                   DiscordComponent
+                   DiscordComponent,
+                   GalleriaComponent
                ],
                imports     : [
                    LandingRoutingModule,
@@ -26,7 +29,8 @@ import { LandingRoutingModule } from './landing-routing.module';
                    MenubarModule,
                    CardModule,
                    CommonModule,
-                   AvatarModule
+                   AvatarModule,
+                   GalleriaModule
                ],
                providers   : []
            } )

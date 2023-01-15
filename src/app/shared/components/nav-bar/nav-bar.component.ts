@@ -22,7 +22,7 @@ import { AppR } from '~shared/config/constants/routes';
                                         width="30"
                                     >
 
-                                    <h3 class="min-w-max">Panarițiu MC</h3>
+                                    <h3 class="min-w-max minecraft-font text-3xl stroke spaced-letters">Panaritiu</h3>
 
                                 </a>
                             </ng-template>
@@ -44,6 +44,10 @@ import { AppR } from '~shared/config/constants/routes';
 
                       ::ng-deep a.p-menubar-button {
                         order: 3;
+                      }
+
+                      .spaced-letters {
+                        letter-spacing: .25rem;
                       }
                     `
                 ]

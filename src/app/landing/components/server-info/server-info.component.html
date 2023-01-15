@@ -1,7 +1,7 @@
 <p-card>
     <!--        START CARD HEADER-->
     <ng-template pTemplate="header">
-        <div class="flex px-3 flex-row align-items-center justify-content-between">
+        <div class="flex px-3 flex-row align-items-center justify-content-between bg-gray-900 border-round-top-md">
             <div>
                 <p class=" font-bold text-xl">
                     Panarițiu is
@@ -23,12 +23,12 @@
 
     <!--        START CARD CONTENT-->
     <div *ngIf="serverStatusInfo.isOnline" class="my-0">
-        <p class="text-xl">Online
-            Players {{serverStatusInfo.onlinePlayersCount}}</p>
+        <p class="text-xl">
+            {{serverStatusInfo.onlinePlayersCount}} Players Online</p>
 
         <div *ngFor="let player of serverStatusInfo.onlinePlayers"
              class="mb-2 flex align-items-center">
-            <p-avatar class="mr-1"
+            <p-avatar class="mr-2"
                       image="https://source.boringavatars.com/beam/120/{{player}}?colors=08E7FF,3931AE,9429B8,001C1C,32383B"
                       shape="circle"></p-avatar>
             {{player}}

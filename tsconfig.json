@@ -24,19 +24,28 @@
       "dom"
     ],
     "paths": {
-      "~app/*": [
+      "~app/*" : [
         "app/*"
       ],
-      "~landing/*": [
+      "~landing/*" : [
         "app/landing/*"
       ],
-      "~mods/*": [
+      "~about/*" : [
+        "app/about/*"
+      ],
+      "~mobs/*" : [
+        "app/mobs/*"
+      ],
+      "~mods/*" : [
         "app/mods/*"
       ],
-      "~services/*": [
+      "~rcon/*" : [
+        "app/rcon/*"
+      ],
+      "~services/*" : [
         "app/services/*"
       ],
-      "~shared/*": [
+      "~shared/*" : [
         "app/shared/*"
       ]
     },

@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ButtonModule } from 'primeng/button';
+import { ImageModule } from 'primeng/image';
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { RippleModule } from 'primeng/ripple';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { ModsComponent } from '~app/mods/mods.component';
 import { ModMenuComponent } from './components/mod-menu/mod-menu.component';
@@ -18,7 +21,10 @@ import { ModsRoutingModule } from './mods-routing.module';
                    ModsRoutingModule,
                    PanelMenuModule,
                    CommonModule,
-                   ScrollPanelModule
+                   ScrollPanelModule,
+                   ImageModule,
+                   ButtonModule,
+                   RippleModule
                ]
 
            } )

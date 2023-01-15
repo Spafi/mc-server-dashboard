@@ -1,15 +1,17 @@
 <div class="grid">
 
-    <div class="col-12 grid-nogutter">
-        <div class="col-12 md:col-6 lg:col-3 col-offset-0 md:col-offset-6 lg:col-offset-9">
-            <app-server-info></app-server-info>
-        </div>
+    <div class="col-12 md:col-6 lg:col-9 flex align-items-center flex-column">
+
+        <h1 class="minecraft-font text-8xl py-0 my-0 gradient-text spaced-letters">
+            Panaritiu</h1>
+
+        <app-galleria></app-galleria>
+
     </div>
 
-    <div class="col-12 grid-nogutter">
-        <div class="col-12 md:col-6 lg:col-3 col-offset-0 md:col-offset-6 lg:col-offset-9">
-            <app-discord></app-discord>
-        </div>
+    <div class="col-12 md:col-6 lg:col-3 flex flex-column gap-2">
+        <app-server-info></app-server-info>
+        <app-discord></app-discord>
     </div>
 
 </div>

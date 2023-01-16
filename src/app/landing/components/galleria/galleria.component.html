@@ -8,27 +8,32 @@
             [showIndicators]="true"
             [showThumbnails]="true"
             [value]="images"
-            indicatorsPosition="bottom"
->
+            indicatorsPosition="bottom">
 
+    <!--    START Galleria Image -->
     <ng-template let-item pTemplate="item">
         <img [alt]="item.alt"
              [src]="item.previewImageSrc"
              class="galleria-image"/>
     </ng-template>
+    <!--    END Galleria Image -->
 
+    <!--    START Galleria Thumbnail -->
     <ng-template let-item pTemplate="thumbnail">
         <div class="grid grid-nogutter justify-content-center">
-            <img [src]="item.thumbnailImageSrc"
+            <img [alt]="item.alt"
+                 [src]="item.thumbnailImageSrc"
                  class="thumbnail-image"
                  style="display: block;"
             />
         </div>
     </ng-template>
+    <!--    END Galleria Thumbnail -->
 
+    <!--    START Galleria Caption -->
     <ng-template let-item pTemplate="caption">
         <h4 class="text-white">{{item.title}}</h4>
     </ng-template>
+    <!--    END Galleria Caption -->
 
 </p-galleria>
-

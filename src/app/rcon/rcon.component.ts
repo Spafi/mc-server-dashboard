@@ -1,16 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component( {
-                selector   : 'app-rcon',
-                templateUrl: './rcon.component.html',
-                styleUrls  : [ './rcon.component.scss' ]
+                selector: 'app-rcon',
+                template: ``,
+                styles  : []
             } )
-export class RconComponent implements OnInit {
-
-    constructor() {
-    }
-
-    ngOnInit(): void {
-    }
+export class RconComponent {
 
 }

@@ -3,25 +3,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgParticlesModule } from 'ng-particles';
-import { MenubarModule } from 'primeng/menubar';
-import { NavBarComponent } from '~shared/components/nav-bar/nav-bar.component';
+import { SharedModule } from '~shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 @NgModule( {
                declarations: [
-                   AppComponent,
-                   NavBarComponent
+                   AppComponent
                ],
                imports     : [
                    BrowserModule,
                    AppRoutingModule,
                    HttpClientModule,
-                   MenubarModule,
                    NgParticlesModule,
-                   BrowserAnimationsModule
+                   BrowserAnimationsModule,
+                   SharedModule
                ],
                providers   : [],
+               exports     : [],
                bootstrap   : [ AppComponent ]
            } )
 export class AppModule {

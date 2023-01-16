@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { environment } from 'environments/environment';
 
 export interface ServerStatusData {
     isOnline: boolean;
@@ -12,7 +13,9 @@ export interface ServerStatusData {
                 selector   : 'app-server-info',
                 templateUrl: './server-info.component.html'
             } )
-export class ServerInfoComponent implements OnInit {
+export class ServerInfoComponent {
+
+    avatarSourceUrl = environment.avatarSourceUrl;
 
     serverStatusInfo: ServerStatusData = {
         isOnline          : true,
@@ -21,11 +24,4 @@ export class ServerInfoComponent implements OnInit {
         totalPlayers      : 0,
         ping              : 0
     };
-
-    constructor() {
-    }
-
-    ngOnInit(): void {
-    }
-
 }

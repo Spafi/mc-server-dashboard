@@ -8,7 +8,7 @@ import { AppR } from '~shared/config/constants/routes';
                     <div class="h-5rem">
                         <p-menubar [model]="items" styleClass="h-4rem fixed w-full z-5">
 
-                            <!--    LOGO & NAME-->
+                            <!--    START LOGO & NAME-->
                             <ng-template pTemplate="start">
 
                                 <a
@@ -21,9 +21,7 @@ import { AppR } from '~shared/config/constants/routes';
                                         height="30"
                                         width="30"
                                     >
-
                                     <h3 class="min-w-max minecraft-font text-3xl stroke spaced-letters">Panaritiu</h3>
-
                                 </a>
                             </ng-template>
                             <!--    END LOGO & NAME-->

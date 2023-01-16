@@ -6,6 +6,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { RippleModule } from 'primeng/ripple';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { ModsComponent } from '~app/mods/mods.component';
+import { SharedModule } from '~shared/shared.module';
 import { ModMenuComponent } from './components/mod-menu/mod-menu.component';
 import { ModComponent } from './components/mod/mod.component';
 import { ModsRoutingModule } from './mods-routing.module';
@@ -24,7 +25,8 @@ import { ModsRoutingModule } from './mods-routing.module';
                    ScrollPanelModule,
                    ImageModule,
                    ButtonModule,
-                   RippleModule
+                   RippleModule,
+                   SharedModule
                ]
 
            } )

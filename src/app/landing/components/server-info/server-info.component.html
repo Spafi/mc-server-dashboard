@@ -1,5 +1,5 @@
 <p-card>
-    <!--        START CARD HEADER-->
+    <!--        START Card Header-->
     <ng-template pTemplate="header">
         <div class="flex px-3 flex-row align-items-center justify-content-between bg-gray-900 border-round-top-md">
             <div>
@@ -19,39 +19,53 @@
             </div>
         </div>
     </ng-template>
-    <!--        END CARD HEADER-->
+    <!--        END Card Header-->
 
-    <!--        START CARD CONTENT-->
+    <!--        START Card Content-->
     <div *ngIf="serverStatusInfo.isOnline" class="my-0">
         <p class="text-xl">
             {{serverStatusInfo.onlinePlayersCount}} Players Online</p>
 
+        <!--        START Online Player List-->
         <div *ngFor="let player of serverStatusInfo.onlinePlayers"
              class="mb-2 flex align-items-center">
             <p-avatar class="mr-2"
-                      image="https://source.boringavatars.com/beam/120/{{player}}?colors=08E7FF,3931AE,9429B8,001C1C,32383B"
-                      shape="circle"></p-avatar>
+                      image="{{avatarSourceUrl}}{{player}}?colors=08E7FF,3931AE,9429B8,001C1C,32383B"
+                      shape="circle">
+            </p-avatar>
             {{player}}
         </div>
-    </div>
-    <!--        END CARD CONTENT-->
+        <!--        END Online Player List-->
 
-    <!--        START CARD FOOTER-->
+    </div>
+    <!--        END Card Content-->
+
+    <!--        START Card Footer-->
     <ng-template pTemplate="footer">
         <div class="flex flex-row gap-2">
-            <button class="p-button-outlined p-button-rounded p-button-icon-left text-green-600"
-                    icon="bi bi-play-fill text-green-600"
-                    label="Start"
-                    pButton
-                    type="button"></button>
 
-            <button class="p-button-outlined p-button-rounded p-button-icon-left text-red-600"
-                    icon="bi bi-stop-fill text-red-600"
-                    label="Stop"
-                    pButton
-                    type="button"></button>
+            <!--            START Start Button-->
+            <app-button [iconOnLeft]="true"
+                        [outlined]="true"
+                        [rounded]="true"
+                        icon="bi bi-play-fill text-green-600"
+                        label="Start"
+                        styleClass="text-green-600">
+            </app-button>
+            <!--            END Start Button-->
+
+            <!--            START Stop Button-->
+            <app-button [iconOnLeft]="true"
+                        [outlined]="true"
+                        [rounded]="true"
+                        icon="bi bi-stop-fill text-red-600"
+                        label="Start"
+                        styleClass="text-red-600">
+            </app-button>
+            <!--            END Stop Button-->
+
         </div>
     </ng-template>
-    <!--        END CARD FOOTER-->
+    <!--        END Card Footer-->
 
 </p-card>

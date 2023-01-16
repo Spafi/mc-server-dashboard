@@ -33,5 +33,4 @@ export class GalleriaComponent implements OnInit {
         this.imageService.getImages()
             .then( images => this.images = images );
     }
-
 }

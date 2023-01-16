@@ -5,9 +5,15 @@ import { mods } from '~mods/mods';
 import { AppR } from '~shared/config/constants/routes';
 
 @Component( {
-                selector   : 'app-mod-menu',
-                templateUrl: './mod-menu.component.html',
-                styleUrls  : [ './mod-menu.component.scss' ]
+                selector: 'app-mod-menu',
+                template: `
+                    <p-panelMenu
+                        [model]="items"
+                        styleClass="w-full max-w-24rem h-full overflow-y-scroll rounded-md"
+                    >
+                    </p-panelMenu>
+                `,
+                styles  : []
             } )
 export class ModMenuComponent implements OnInit {
     items!: MenuItem[];

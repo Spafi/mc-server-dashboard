@@ -2,52 +2,74 @@ export interface Mod {
     name: string,
     slug: string,
     url: string,
-    details: string,
-    alterations: string[],
+    details?: string,
+    alterations?: string[],
 }
 
 export const mods: Mod[] = [
     {
-        name       : 'Mod 1',
-        slug       : 'mod-1',
-        url        : 'http://localhost:8080',
-        details    : 'mod details',
-        alterations: [ 'fist alteration', 'second alteration' ]
+        name: 'Ad Astra!',
+        slug: 'ad-astra',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/ad-astra'
     },
     {
-        name       : 'Mod 2',
-        slug       : 'Mod 2',
-        url        : 'http://localhost:8080/2',
-        details    : 'mod 2 details',
-        alterations: [ 'fist alteration 2', 'second alteration 2' ]
+        name: 'Additional Structures',
+        slug: 'additional-structures-fabric',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/additional-structures-fabric'
     },
     {
-        name       : 'mod 3',
-        slug       : 'mod 3',
-        url        : 'http://localhost:8080/3',
-        details    : 'mod 3 details',
-        alterations: [ 'fist alteration 3', 'second alteration 3' ]
+        name: 'AdventureZ',
+        slug: 'adventurez',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/adventurez'
     },
     {
-        name       : 'mod 4',
-        slug       : 'mod 4',
-        url        : 'http://localhost:8080/4',
-        details    : 'mod 4 details',
-        alterations: [ 'fist alteration 4', 'second alteration 4' ]
+        name: 'Animal Feeding Trough',
+        slug: 'animal-feeding-trough',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/animal-feeding-trough'
     },
     {
-        name       : 'mod 5',
-        slug       : 'mod 5',
-        url        : 'http://localhost:8080/5',
-        details    : 'mod 5 details',
-        alterations: [ 'fist alteration 5', 'second alteration 5' ]
+        name: 'Appleskin',
+        slug: 'appleskin',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/appleskin'
     },
-
     {
-        name       : 'mod 6',
-        slug       : 'mod 6',
-        url        : 'http://localhost:8080/6',
-        details    : 'mod 6 details',
-        alterations: [ 'fist alteration 6', 'second alteration 6' ]
+        name: 'Applied Energistics 2',
+        slug: 'applied-energistics-2',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2'
+    },
+    {
+        name: 'Audioplayer',
+        slug: 'audioplayer',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/audioplayer'
+    },
+    {
+        name: 'Awesome Dungeon',
+        slug: 'awesome-dungeon-fabric',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/awesome-dungeon-fabric'
+    },
+    {
+        name: 'Awesome Dungeon Nether',
+        slug: 'awesome-dungeon-nether-fabric',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/awesome-dungeon-nether-fabric'
+    },
+    {
+        name: 'Awesome Dungeon End',
+        slug: 'awesome-dungeon-the-end-fabric',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/awesome-dungeon-the-end-fabric'
+    },
+    {
+        name: 'Better Animals Plus',
+        slug: 'betteranimalsplus',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/betteranimalsplus'
+    },
+    {
+        name: 'Better End',
+        slug: 'betterend',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/betterend'
+    },
+    {
+        name: 'Better Nether',
+        slug: 'betternether',
+        url : 'https://www.curseforge.com/minecraft/mc-mods/betternether'
     }
 ];

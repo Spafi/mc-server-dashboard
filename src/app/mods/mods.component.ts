@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { take } from 'rxjs';
+import { ServerService } from '~landing/services/server.service';
 import { AppR } from '~shared/config/constants/routes';
 import { mods } from './mods';
 
@@ -15,6 +17,7 @@ import { mods } from './mods';
                                     styleClass="w-full"
                                     icon="bi bi-file-earmark-arrow-down text-gray-900"
                                     label="Download mods archive"
+                                    (onClick)="downloadMods()"
                                 >
                                 </app-button>
                             </div>
@@ -46,7 +49,9 @@ export class ModsComponent implements OnInit {
     mods = mods;
     items!: MenuItem[];
 
-    constructor() {
+    constructor(
+        private readonly serverService: ServerService
+    ) {
     }
 
     ngOnInit() {
@@ -58,5 +63,11 @@ export class ModsComponent implements OnInit {
             };
         } );
     }
+
+    downloadMods() {
+        return this.serverService.downloadMods()
+                   .pipe( take( 1 ) );
+    }
+
 
 }

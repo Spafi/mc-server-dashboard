@@ -1,4 +1,4 @@
-<p-card>
+<p-card *ngIf="(serverStatusInfo$ | async) as serverStatusInfo">
     <!--        START Card Header-->
     <ng-template pTemplate="header">
         <div class="flex px-3 flex-row align-items-center justify-content-between bg-gray-900 border-round-top-md">
@@ -24,7 +24,8 @@
     <!--        START Card Content-->
     <div *ngIf="serverStatusInfo.isOnline" class="my-0">
         <p class="text-xl">
-            {{serverStatusInfo.onlinePlayersCount}} Players Online</p>
+            {{serverStatusInfo.onlinePlayersCount}} {{serverStatusInfo.onlinePlayersCount == 1 ? 'Player' : 'Players'}}
+            Online</p>
 
         <!--        START Online Player List-->
         <div *ngFor="let player of serverStatusInfo.onlinePlayers"
@@ -48,6 +49,8 @@
             <app-button [iconOnLeft]="true"
                         [outlined]="true"
                         [rounded]="true"
+                        (onClick)="startServer()"
+                        [loading]="serverStatusInfo.currentStatus =='booting'"
                         icon="bi bi-play-fill text-green-600"
                         label="Start"
                         styleClass="text-green-600">
@@ -58,8 +61,10 @@
             <app-button [iconOnLeft]="true"
                         [outlined]="true"
                         [rounded]="true"
+                        (onClick)="stopServer()"
+                        [loading]="serverStatusInfo.currentStatus =='stopping'"
                         icon="bi bi-stop-fill text-red-600"
-                        label="Start"
+                        label="Stop"
                         styleClass="text-red-600">
             </app-button>
             <!--            END Stop Button-->

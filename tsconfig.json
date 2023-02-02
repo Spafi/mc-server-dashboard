@@ -6,26 +6,32 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
+    "noImplicitOverride" : true,
+    "noPropertyAccessFromIndexSignature" : true,
+    "noImplicitReturns" : true,
+    "noFallthroughCasesInSwitch" : true,
+    "sourceMap" : true,
+    "declaration" : false,
+    "downlevelIteration" : true,
+    "experimentalDecorators" : true,
+    "moduleResolution" : "node",
+    "importHelpers" : true,
+    "target" : "es2020",
+    "module" : "es2020",
+    "useDefineForClassFields" : false,
+    "lib" : [
+      "es2020",
       "dom"
     ],
-    "paths": {
+    "paths" : {
       "~app/*" : [
         "app/*"
+      ],
+      "~config/*" : [
+        "app/config/*"
+      ],
+      "~dtos/*" : [
+        "app/dtos/*"
       ],
       "~landing/*" : [
         "app/landing/*"
@@ -47,6 +53,9 @@
       ],
       "~shared/*" : [
         "app/shared/*"
+      ],
+      "~store/*" : [
+        "app/store/*"
       ]
     },
     "allowSyntheticDefaultImports": true

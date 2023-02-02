@@ -10,7 +10,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
                         (click)="onButtonClick($event)"
                         pButton
                         pRipple
-                        type="button"
+                        [type]="type"
+                        [loading]="loading"
                     >
                     </button>
                 `,
@@ -26,6 +27,7 @@ export class ButtonComponent implements OnInit {
     @Input() iconOnLeft: boolean = true;
     @Input() loading: boolean = false;
     @Input() disabled: boolean = false;
+    @Input() type: string = 'button';
 
     @Output() onClick: EventEmitter<Event> = new EventEmitter<Event>();
 

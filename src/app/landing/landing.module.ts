@@ -8,6 +8,7 @@ import { GalleriaModule } from 'primeng/galleria';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { MenubarModule } from 'primeng/menubar';
 import { LandingComponent } from '~landing/landing.component';
+import { ServerService } from '~landing/services/server.service';
 import { SharedModule } from '~shared/shared.module';
 import { DiscordComponent } from './components/discord/discord.component';
 import { GalleriaComponent } from './components/galleria/galleria.component';
@@ -34,7 +35,7 @@ import { LandingRoutingModule } from './landing-routing.module';
                    GalleriaModule,
                    SharedModule
                ],
-               providers   : []
+               providers   : [ ServerService ]
            } )
 export class LandingModule {
 }

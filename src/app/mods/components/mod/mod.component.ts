@@ -6,7 +6,7 @@ import { Mod } from '~mods/mods';
                 template: `
                     <div
                         [id]="mod.name"
-                        class="h-30rem bg-gray mb-4 border-round-md p-4 flex flex-column"
+                        class="h-20rem bg-gray mb-4 border-round-md p-4 flex flex-column"
                     >
 
                         <div class="flex align-items-center gap-4 mb-4">
@@ -18,11 +18,11 @@ import { Mod } from '~mods/mods';
                             >
                             </p-image>
 
-                            <p class="text-xl font-bold my-0">{{mod.name}}</p>
+                            <a href="{{mod.url}}" class="text-xl font-bold my-0">{{mod.name}}</a>
                         </div>
 
-                        <div class="bg-white-alpha-10 border-purple border-1 flex-grow-1 border-round-md">
-                            Feature in development
+                        <div class="bg-white-alpha-10 border-purple border-1 flex-grow-1 border-round-md p-2">
+                            <p> Feature in development</p>
                         </div>
 
                     </div>

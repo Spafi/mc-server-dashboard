@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from 'primeng/image';
+import { Observable } from 'rxjs';
 import { ImageService } from '~services/Image.service';
 
 @Component( {
@@ -10,7 +11,7 @@ import { ImageService } from '~services/Image.service';
             } )
 export class GalleriaComponent implements OnInit {
 
-    images!: Image[];
+    images$!: Observable<Image[]>;
     responsiveOptions: any[] = [
         {
             breakpoint: '1024px',
@@ -30,7 +31,6 @@ export class GalleriaComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.imageService.getImages()
-            .then( images => this.images = images );
+        this.images$ = this.imageService.getImages();
     }
 }

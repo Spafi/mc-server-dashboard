@@ -24,7 +24,19 @@ import { Engine } from 'tsparticles-engine';
                         </section>
 
                     </div>
-                `
+                    <p-toast
+                        [preventOpenDuplicates]="true"
+                        position="bottom-left"
+                        styleClass="text-gray-900"
+                    ></p-toast>
+
+                `, styles: [
+        `
+          :host ::ng-deep .p-toast .p-toast-message .p-toast-message-content {
+            color: #121212;
+          }
+        `
+    ]
             } )
 export class AppComponent implements OnInit {
 

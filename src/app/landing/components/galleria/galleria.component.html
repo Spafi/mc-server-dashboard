@@ -1,13 +1,14 @@
 <p-galleria [autoPlay]="true"
             [changeItemOnIndicatorHover]="true"
             [circular]="true"
-            [containerStyle]="{'max-width': '900px', 'background': 'black'}"
-            [numVisible]="7"
+            [containerStyle]="{'max-width': '1000px', 'background': 'black'}"
             [responsiveOptions]="responsiveOptions"
             [showIndicatorsOnItem]="true"
             [showIndicators]="true"
-            [showThumbnails]="true"
-            [value]="images"
+            [showItemNavigators]="true"
+            [showThumbnailNavigators]="false"
+            [showThumbnails]="false"
+            [value]="(images$ | async) ?? []"
             indicatorsPosition="bottom">
 
     <!--    START Galleria Image -->
@@ -17,18 +18,6 @@
              class="galleria-image"/>
     </ng-template>
     <!--    END Galleria Image -->
-
-    <!--    START Galleria Thumbnail -->
-    <ng-template let-item pTemplate="thumbnail">
-        <div class="grid grid-nogutter justify-content-center">
-            <img [alt]="item.alt"
-                 [src]="item.thumbnailImageSrc"
-                 class="thumbnail-image"
-                 style="display: block;"
-            />
-        </div>
-    </ng-template>
-    <!--    END Galleria Thumbnail -->
 
     <!--    START Galleria Caption -->
     <ng-template let-item pTemplate="caption">

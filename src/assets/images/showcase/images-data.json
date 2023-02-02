@@ -1,62 +1,98 @@
 {
   "data" : [
     {
-      "previewImageSrc" : "assets/images/showcase/ocean-night.png",
-      "thumbnailImageSrc" : "assets/images/showcase/ocean-night.png",
+      "previewImageSrc" : "assets/images/showcase/ocean-night.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/ocean-night.webp",
       "alt" : "Ocean Night",
       "title" : "Ocean Night"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/cock-island.png",
-      "thumbnailImageSrc" : "assets/images/showcase/cock-island.png",
+      "previewImageSrc" : "assets/images/showcase/perky-rock.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/perky-rock.webp",
+      "alt" : "Perky Rock",
+      "title" : "Perky Rock"
+    },
+    {
+      "previewImageSrc" : "assets/images/showcase/nether.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/nether.webp",
+      "alt" : "Nether",
+      "title" : "Nether"
+    },
+    {
+      "previewImageSrc" : "assets/images/showcase/new-spawn.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/new-spawn.webp",
+      "alt" : "New World",
+      "title" : "New World"
+    },
+    {
+      "previewImageSrc" : "assets/images/showcase/beach-house.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/beach-house.webp",
+      "alt" : "Beach House",
+      "title" : "Beach House"
+    },
+    {
+      "previewImageSrc" : "assets/images/showcase/cock-island.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/cock-island.webp",
       "alt" : "Cock Island",
       "title" : "Cock Island"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/deer.png",
-      "thumbnailImageSrc" : "assets/images/showcase/deer.png",
+      "previewImageSrc" : "assets/images/showcase/deer.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/deer.webp",
       "alt" : "Camel Trip",
       "title" : "Camel Trip"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/savanna-sunset.png",
-      "thumbnailImageSrc" : "assets/images/showcase/savanna-sunset.png",
+      "previewImageSrc" : "assets/images/showcase/mist-valley.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/mist-valley.webp",
+      "alt" : "Mist Valley",
+      "title" : "Mist Valley"
+    },
+    {
+      "previewImageSrc" : "assets/images/showcase/savanna-sunset.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/savanna-sunset.webp",
       "alt" : "Savanna Sunset",
       "title" : "Savanna Sunset"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/blonde-witch.png",
-      "thumbnailImageSrc" : "assets/images/showcase/blonde-witch.png",
+      "previewImageSrc" : "assets/images/showcase/blonde-witch.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/blonde-witch.webp",
       "alt" : "Blonde Witch",
       "title" : "Blonde Witch"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/portal-tree.png",
-      "thumbnailImageSrc" : "assets/images/showcase/portal-tree.png",
+      "previewImageSrc" : "assets/images/showcase/portal-tree.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/portal-tree.webp",
       "alt" : "Portal Tree",
       "title" : "Portal Tree"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/glitch.png",
-      "thumbnailImageSrc" : "assets/images/showcase/glitch.png",
+      "previewImageSrc" : "assets/images/showcase/rocket.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/rocket.webp",
+      "alt" : "Ad Astra!",
+      "title" : "Ad Astra!"
+    },
+    {
+      "previewImageSrc" : "assets/images/showcase/glitch.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/glitch.webp",
       "alt" : "Glitch - What the actual fuck",
       "title" : "Glitch - What the actual fuck"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/welcome.png",
-      "thumbnailImageSrc" : "assets/images/showcase/welcome.png",
+      "previewImageSrc" : "assets/images/showcase/welcome.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/welcome.webp",
       "alt" : "Welcome",
       "title" : "Welcome"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/eden-trip.png",
-      "thumbnailImageSrc" : "assets/images/showcase/eden-trip.png",
+      "previewImageSrc" : "assets/images/showcase/eden-trip.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/eden-trip.webp",
       "alt" : "Eden Trip",
       "title" : "Eden Trip"
     },
     {
-      "previewImageSrc" : "assets/images/showcase/cock-island-aerial.png",
-      "thumbnailImageSrc" : "assets/images/showcase/cock-island-aerial.png",
+      "previewImageSrc" : "assets/images/showcase/cock-island-aerial.webp",
+      "thumbnailImageSrc" : "assets/images/showcase/cock-island-aerial.webp",
       "alt" : "Money Shot",
       "title" : "Money Shot"
     }

@@ -1,1 +1,104 @@
-<p>mobs works!</p>
+<div class="grid-nogutter">
+    <div class="col-12 flex flex-column align-items-center justify-content-center gap-2">
+
+        <div class="w-full max-width">
+
+            <div class="w-full gap-2 mb-4 bg-gray p-4">
+                <div class="w-full flex flex-column justify-content-center align-items-center mb-4">
+                    <span class="text-lg font-bold mb-2">Register a <span
+                            class="underline">named</span> mob to be teleported to you</span>
+                    <span class="text-sm font-italic"> After registering, you can use in game
+                    <code>/function tp:[mob_name]_[your_name]</code>
+                        to teleport your mob to you <span class="text-red-500">if somebody is near it</span> (Names are <span
+                                class="text-red-500 font-bold">case sensitive</span>)
+                    </span>
+
+                </div>
+                <form (ngSubmit)="onSubmit()"
+                      [formGroup]="form"
+                      class="flex flex-row align-items-center justify-content-between gap-2 pb-4">
+                <span class="p-float-label w-full">
+                    <input class="w-full p-inputtext-sm"
+                           formControlName="playerName"
+                           id="playerName"
+                           pInputText
+                           type="text">
+                    <label for="playerName">Player Name</label>
+                </span>
+                    <span class="p-float-label w-full">
+                    <input class="w-full p-inputtext-sm"
+                           formControlName="mobName"
+                           id="mobName"
+                           pInputText
+                           type="text">
+                    <label for="mobName">Mob Name</label>
+                </span>
+                    <app-button
+                            icon="bi bi-send text-gray-900"
+                            label="Submit"
+                            styleClass="w-full h-full"
+                            type="submit">
+                    </app-button>
+                </form>
+            </div>
+
+            <p-table [columns]="tableColumns"
+                     [rowHover]="true"
+                     [scrollable]="true"
+                     [value]="(playerToMobList$ | async) ?? []"
+                     [virtualScrollItemSize]="46"
+                     [virtualScroll]="true"
+                     groupRowsBy="playerName"
+                     responsiveLayout="scroll"
+                     rowGroupMode="rowspan"
+                     scrollHeight="70vh"
+                     styleClass="w-full">
+                <ng-template let-columns pTemplate="header">
+                    <tr>
+                        <th *ngFor="let col of columns">
+                            <span class="text-lg font-bold">{{col.header}}</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th *ngFor="let col of columns">
+                            <p-columnFilter *ngIf="col.field != ''"
+                                            field="{{col.field}}"
+                                            type="text"
+                            ></p-columnFilter>
+                        </th>
+                    </tr>
+
+
+                </ng-template>
+                <ng-template let-data
+                             let-rowgroup="rowgroup"
+                             let-rowspan="rowspan" pTemplate="body">
+                    <tr>
+                        <td *ngIf="rowgroup" [attr.rowspan]="rowspan">
+                            <div class="flex align-items-center">
+                                {{data.playerName}}
+                                <p-avatar class="ml-2"
+                                          image="{{avatarSourceUrl}}{{data.playerName}}?colors=08E7FF,3931AE,9429B8,001C1C,32383B"
+                                          shape="circle">
+                                </p-avatar>
+                            </div>
+                        </td>
+                        <td>{{data.mobName}}</td>
+                        <td>
+                            <!--            START Stop Button-->
+                            <app-button
+                                    (onClick)="deleteMobTeleport(data)"
+                                    [outlined]="true"
+                                    [rounded]="true"
+                                    icon="bi bi-x text-red-600"
+                                    styleClass="text-red-600 cursor-pointer w-2rem h-2rem">
+                            </app-button>
+                            <!--            END Stop Button-->
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+
